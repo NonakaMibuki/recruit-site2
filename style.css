@@ -19,6 +19,10 @@ time, mark, audio, video {
     background: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1;
     font-size: 16px;
@@ -470,12 +474,12 @@ About us
     z-index: -1;
 }
 
-.about__container, .crosstalk__container, .culture__container {
+.about__container, .culture__container {
     display: flex;
     justify-content: center;
 }
 
-.about__container--img, .crosstalk__container--img, .culture__container--img {
+.about__container--img, .culture__container--img {
     display: block;
     width: 65%;
     position: relative;
@@ -494,7 +498,7 @@ About us
     z-index: 1;
 }
 
-.about__container--text, .crosstalk__container--text, .culture__container--text {
+.about__container--text, .culture__container--text {
     width: 35%;
     z-index: 1;
 }
@@ -563,7 +567,7 @@ person
 ================================*/
 
 .person {
-    margin: 100px 0 350px 0;
+    margin: 100px 0 450px 0;
     position: relative;
 }
 
@@ -726,44 +730,6 @@ div.entry-class.entry-class__new {
     transform: translate(-50%, -36%);
 }
 
-/*===============================
-
-crosstalk
-
-================================*/
-
-.crosstalk {
-    margin: 0 0 100px 50px;
-    position: relative;
-}
-
-.crosstalk::before {
-    content: '';
-    display: block;
-    width: 91%;
-    height: 77%;
-    position: absolute;
-    background-color: #EBEFF3;
-    top: 10%;
-    left: auto;
-    right: 0;
-    z-index: -1;
-}
-
-.crosstalk__container--img img {
-    width: 49rem;
-    height: auto;
-    margin-top: 9rem;
-}
-
-.crosstalk__container--text {
-    margin-left: -1.5rem;
-}
-
-.crosstalk__container--text h3 {
-    margin-left: -1.5rem;
-}
-
 
 /*===============================
 
@@ -772,7 +738,7 @@ culture
 ================================*/
 
 .culture {
-    margin: 150px 0 250px 0;
+    margin: 200px 0 250px 0;
     position: relative;
 }
 
@@ -864,7 +830,7 @@ footer ul li a p {
     white-space: nowrap;
 }
 
-footer ul li:nth-child(1) a span, footer ul li:nth-child(1) a p{
+footer ul li:nth-child(1) a span, footer ul li:nth-child(1) a p {
     color: #0079c0;
 }
 
@@ -951,3 +917,731 @@ footer ul li:nth-child(1) a span, footer ul li:nth-child(1) a p{
     color: #949494;
 }
 
+
+/*===============================
+
+message.html
+
+================================*/
+
+.top__container img {
+    width: 100%;
+    position: relative;
+}
+
+.top__container--title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.top__container--title h2 {
+    font-family: "titlefont", sans-serif;
+    color: #fff;
+    font-size: 7rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+
+.top__container--title p {
+    font-size: 1.3rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.message__container {
+    margin: 150px auto;
+    position: relative;
+}
+
+.message__container--text {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.message__container--text p {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+.message__list::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 78%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 10%;
+    left: auto;
+    right: 0;
+    z-index: -1;
+}
+
+.message__list ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+}
+
+ul li.message__list--item {
+    margin: 40px 25px 150px;
+    position: relative;
+}
+
+ul li.message__list--item a {
+    display: block;
+}
+
+ul li.message__list--item a img, ul li.message__list--item img {
+    width: 20rem;
+    height: 21rem;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+}
+
+ul li.message__list--item a div.person-info__card, ul li.message__list--item div.person-info__card {
+    position: absolute;
+    bottom: -20%;
+    width: 14.5rem;
+    padding: 30px 15px;
+    box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+}
+
+.person-info__card p.person-post {
+    font-size: 0.85rem;
+    padding-bottom: 5px;
+    letter-spacing: 0.1em;
+}
+
+.read-more__btn, .coming-soon__btn {
+    position: absolute;
+    z-index: 999;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    background-color: #0079C0;
+    padding: 25px 45px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.87rem;
+    letter-spacing: 0.15em;
+    font-weight: 200;
+    box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+}
+
+.coming-soon__btn {
+    background-color: #EBEFF3;
+    color: #0079C0;
+}
+
+
+/*===============================
+
+about.html
+
+================================*/
+
+.vision__container {
+    margin-bottom: 300px;
+    position: relative;
+}
+
+.vision__container::before {
+    content: '';
+    display: block;
+    width: 80.5%;
+    height: 68%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 42%;
+    left: auto;
+    right: 0;
+    z-index: -1;
+}
+
+.vision__container--title, .izm__container--title {
+    margin: 150px auto;
+    text-align: center;
+}
+
+.vision__container--title h5, .izm__container--title h5 {
+    font-family: "Montserrat", sans-serif;
+    color: #0079C0;
+    letter-spacing: 0.25em;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.vision__container--title span, .izm__container--title span {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+p.vision__container--subtitle {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2.2rem;
+    color: #0079C0;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.vision__container--main {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.vision__container--img {
+    width: 42.5%;
+}
+
+.vision__container--main img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.vision__container--text h4, .vision__container--text p {
+    margin-left: 70px;
+}
+
+.vision__container--main div h3.section__title {
+    transform: rotate(-10deg);
+}
+
+.vision__container--text h4 {
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.vision__container--text p {
+    margin-bottom: 10px;
+    padding: 13px 0;
+    font-size: 0.94rem;
+}
+
+.background, .solution {
+    position: relative;
+    width: 100%;
+}
+
+.background img, .solution img {
+    width: 100%;
+}
+
+.background__title, .solution__title {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    color: #fff;
+    text-align: center;
+}
+
+.background__title h3, .solution__title h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 25px;
+}
+
+.background__title span, .solution__title span {
+    font-weight: 200;
+}
+
+.background__container, .solution__container, .about-culture__item {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 120, 190, 0.1);
+    z-index: 1;
+}
+
+.background::before {
+    content: '';
+    display: block;
+    width: 86%;
+    height: 135%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 200%;
+    left: auto;
+    right: 0;
+    z-index: -1;
+}
+
+.background__container--list ul, .solution__container--list ul, .about-culture__item ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    box-sizing: border-box;
+    margin: 0 55px;
+    border-bottom: 1px solid #C5C5C5;
+    z-index: 999;
+}
+
+.background__container--list ul.list-last, .solution__container--list ul.list-last {
+    border-bottom: none;
+}
+
+.background__container--list ul li.background-list__text, .solution__container--list ul li.solution-list__text {
+    width: 95%;
+}
+
+.background__container--list ul li h5, .solution__container--list ul li h5, .about-culture__item ul li h5 {
+    font-size: 1.45rem;
+    margin-bottom: 50px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    color: #0079C0;
+}
+
+.background__container--list ul li p, .solution__container--list ul li p, .about-culture__item ul li p {
+    font-size: 0.89rem;
+    letter-spacing: 0.12em;
+    line-height: 1.9;
+    color: #353535;
+    font-weight: 300;
+}
+
+.background__container--list ul li img, .solution__container--list ul li img, .about-culture__text ul li img {
+    width: 100%;
+}
+
+.solution {
+    margin-top: 95rem;
+    position: relative;
+}
+
+.solution::before {
+    content: '';
+    display: block;
+    width: 86%;
+    height: 155%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 200%;
+    left: 0;
+    right: auto;
+    z-index: -1;
+}
+
+.about-sub {
+    margin-top: 114rem;
+    margin-bottom: 80px;
+}
+
+.about-sub__container {
+    display: flex;
+}
+
+.about-sub__item {
+    width: calc(100%/2);
+    position: relative;
+}
+
+.about-sub__item a {
+    text-decoration: none;
+    display: block;
+}
+
+.about-sub__item a h3 {
+    color: #0079C0;
+    font-size: 3.5rem;
+    position: absolute;
+    top: -7.5%;
+    left: 13%;
+}
+
+.about-sub__item a img {
+    width: 100%;
+}
+
+.about-sub__item--text {
+    margin: 40px auto;
+    padding: 0 12%;
+}
+
+.about-sub__item--text p {
+    color: #323232;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.about-sub__item--text p.about-sub__text--title {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+.more-read {
+    margin: 45px 0;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #323232;
+    font-size: 0.92rem;
+    letter-spacing: 0.2em;
+}
+
+.more-read div.more-btn__sub {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: #353535;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    line-height: 1.7rem;
+    margin-right: 15px;
+    letter-spacing: 0;
+}
+
+
+/*===============================
+
+culture.html
+
+================================*/
+
+.izm__container h2 {
+    font-family: "titlefont", sans-serif;
+    color: #0079C0;
+    font-size: 6rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    transform: rotate(-4deg);
+}
+
+.professional__inner {
+    margin: 0 11%;
+}
+
+.professional__inner ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    border-bottom: 1px solid #C5C5C5;
+    padding-bottom: 70px;
+}
+
+.professional__inner ul li {
+    width: 50%;
+}
+
+.professional__inner ul li.professional-img {
+    width: 55%;
+}
+
+.professional__inner ul li img {
+    width: 100%;
+}
+
+.professional__inner ul li.professional-text {
+    width: 45%;
+    padding: 10px 40px;
+    margin-left: 2rem;
+}
+
+.professional__inner ul li h5 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #323232;
+    margin-bottom: 50px;
+    letter-spacing: 0.1em;
+}
+
+.professional__inner ul li p {
+    font-size: 0.93rem;
+    line-height: 2;
+    color: #323232;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.guidelines__inner {
+    margin: 7% 12% 12%;
+}
+
+.guidelines__inner h5 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #323232;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+ul.guidelines__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+ul.guidelines__list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 40px 0;
+}
+
+ul.guidelines__list li img {
+    width: 6.5rem;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0.5px 0.5px 15px #EBEFF3;
+}
+
+ul.guidelines__list li:nth-child(even) img {
+    margin-left: 30px;
+}
+
+ul.guidelines__list li:nth-child(odd) div {
+    padding: 0 40px 0 30px;
+    box-sizing: border-box;
+}
+
+ul.guidelines__list li:nth-child(even) div {
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+}
+
+
+ul.guidelines__list li div p.guidelines__list--title {
+    font-size: 1.05rem;
+    color: #0079C0;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-bottom: 13px;
+}
+
+ul.guidelines__list li div p.guidelines__list--text {
+    font-size: 0.89rem;
+    font-weight: 300;
+    color: #323232;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+.about-culture {
+    width: 100%;
+    position: relative;
+}
+
+.about-culture::before {
+    content: '';
+    display: block;
+    width: 86%;
+    height: 105%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 90%;
+    left: 0;
+    right: auto;
+    z-index: -1;
+}
+
+.about-culture img {
+    width: 100%;
+}
+
+.about-culture h2 {
+    position: absolute;
+    top: -4rem;
+    left: 8rem;
+    font-family: "titlefont", sans-serif;
+    font-size: 6rem;
+    letter-spacing: 0.03em;
+    transform: rotate(-7deg);
+    color: #0079C0;
+    text-align: right;
+}
+
+.about-culture__item {
+    top: 84%;
+}
+
+.about-culture__item ul li.about-culture__text {
+    width: 100%;
+}
+
+.welfare {
+    margin-top: 49.5rem;
+}
+
+.welfare__title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welfare__title h3 {
+    font-size: 1.45rem;
+    margin-bottom: 50px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    color: #0079C0;
+}
+
+.welfare__title p {
+    font-size: 0.96rem;
+    font-weight: 300;
+    color: #323232;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.welfare__title ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.welfare__title ul li {
+    margin: 50px 10px;
+}
+
+.welfare__title ul li a {
+    display: block;
+    width: 20rem;
+    height: 2.6rem;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 2.6rem;
+    border-radius: 30px;
+    color: #929292;
+    border: 4px solid #F4F4F4;
+    transition: all 0.5s ease;
+}
+
+
+.welfare__title ul li.list-box__system a:hover {
+    border: 4px solid #4479C0;
+}
+
+.welfare__title ul li.list-box__event a:hover {
+    border: 4px solid #D477B9;
+}
+
+.welfare__title ul li.list-box__enviroment a:hover {
+    border: 4px solid #8DD097;
+}
+
+.content {
+    padding-top: 100px;
+}
+
+.welfare__list {
+    position: relative;
+    background-color: #E9EDF1;
+    margin-bottom: 200px;
+}
+
+ul.welfare__list--system, ul.welfare__list--events, ul.welfare__list--environment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3% 13% 1%;
+    padding: 1.5% 0;
+    margin-top:-100px;
+    padding-top:100px;
+}
+
+ul.welfare__list--environment {
+    margin: 3% 13% 0;
+    padding: 1.5% 0 0;
+    margin-top:-100px;
+    padding-top:100px;
+}
+
+ul.welfare__list--system li, ul.welfare__list--events li, ul.welfare__list--environment li {
+    width: 31.2rem;
+    height: 33.5rem;
+    padding: 30px 50px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    box-shadow: 0 0 30px rgba(0, 120, 190, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+ul.welfare__list--system li a, ul.welfare__list--events li a, ul.welfare__list--environment li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+}
+
+ul.welfare__list--system li a img, ul.welfare__list--events li a img, ul.welfare__list--environment li a img {
+    width: 11rem;
+    height: auto;
+    margin: 50px 0;
+}
+
+.welfare__list ul li a div.welfare__list--kinds {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    width: 8rem;
+    height: 1.7rem;
+    background-color: #4479C0;
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 1.7rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+}
+
+.welfare__list ul li a p.welfare__item--text {
+    text-align: left;
+    font-size: 1.05rem;
+    color: #323232;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.welfare__list ul li a p {
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 300;
+    letter-spacing: 0.09em;
+    line-height: 1.7;
+}
+
+.welfare__list ul li a div.list-event {
+    background-color: #D477B9;
+}
+
+.welfare__list ul li a div.list-environment {
+    background-color: #8DD097;
+}
