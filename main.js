@@ -82,7 +82,18 @@ $(function () {
   });
 
   $(window).scroll(function () {
-    $("#fadeIn-text10, #fadeIn-text11, #fadeIn-text12, #fadeIn-text13, #fadeIn-text14, #fadeIn-text15").each(function () {
+    $("#fadeIn5").each(function () {
+      var position = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > position - windowHeight + 30) {
+        $(this).addClass("active");
+      }
+    });
+  });
+
+  $(window).scroll(function () {
+    $("#fadeIn-text10, #fadeIn-text11, #fadeIn-text12, #fadeIn-text13, #fadeIn-text14, #fadeIn-text15, #fadeIn-text16, #fadeIn-text17").each(function () {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -94,7 +105,7 @@ $(function () {
 
   //TOPページ各サブタイトル・テキストフェードイン
   $(window).scroll(function () {
-    $("#fadeIn-title, #fadeIn-title2, #fadeIn-title3, #fadeIn-title4, #fadeIn-title5").each(function () {
+    $("#fadeIn-title, #fadeIn-title2, #fadeIn-title3, #fadeIn-title4, #fadeIn-title5, #fadeIn-title6, #fadeIn-title7, #fadeIn-title8, #fadeIn-title9, #fadeIn-title10, #fadeIn-title11, #fadeIn-title12, #fadeIn-title13, #fadeIn-title14, #fadeIn-title15").each(function () {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
