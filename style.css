@@ -27,6 +27,7 @@ body {
     line-height: 1;
     font-size: 16px;
     color: #323232;
+    overflow-x: hidden;
     font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", arial, helvetica, sans-serif;
 }
 
@@ -255,7 +256,7 @@ fv
 .fv h2 {
     position: absolute;
     top: 52%;
-    left: 30%;
+    left: 14%;
     transform: translate(-52%, -30%);
     color: #fff;
     font-size: 2.2rem;
@@ -328,6 +329,25 @@ h3 {
     font-size: 0.85rem;
 }
 
+#fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /*===============================
 
@@ -349,6 +369,10 @@ h3.section__title {
     margin-right: 5rem;
 }
 
+ul.news__box li {
+    border-bottom: 1px solid #C8C8C8;
+}
+
 ul.news__box li a {
     display: flex;
     flex-wrap: wrap;
@@ -356,9 +380,8 @@ ul.news__box li a {
     text-decoration: none;
     line-height: 1.8;
     font-size: 0.83rem;
-    border-bottom: 1px solid #C8C8C8;
     margin-bottom: 10px;
-    padding: 15px 0 25px;
+    padding: 25px 0 20px;
 
 }
 
@@ -380,6 +403,16 @@ ul.news__box li a p {
     letter-spacing: 0.1em;
 }
 
+#fadeIn, #fadeIn2, #fadeIn3, #fadeIn4 {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 1s;
+}
+
+#fadeIn.active, #fadeIn2.active, #fadeIn3.active, #fadeIn4.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
 
 /*===============================
 
@@ -557,6 +590,37 @@ div.more-btn a {
     font-weight: 300;
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
+}
+
+#fadeIn-title, #fadeIn-title2, #fadeIn-title3, #fadeIn-title4, #fadeIn-title5 {
+    opacity: 0;
+    transform: translate(0, 60px);
+    transition: all 1s;
+}
+
+#fadeIn-title.active, #fadeIn-title2.active, #fadeIn-title3.active, #fadeIn-title4.active, #fadeIn-title5.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#fadeIn-text, #fadeIn-text2, #fadeIn-text3, #fadeIn-text4, #fadeIn-text5, #fadeIn-text6, #fadeIn-text7, #fadeIn-text8, #fadeIn-text9, #fadeIn-text10, #fadeIn-text11, #fadeIn-text12, #fadeIn-text13, #fadeIn-text14, #fadeIn-text15 {
+    opacity: 0;
+    transform: translate(0, 60px);
+    transition: all 1s;
+}
+
+#fadeIn-text.active, #fadeIn-text2.active, #fadeIn-text3.active, #fadeIn-text4.active, #fadeIn-text5.active, #fadeIn-text6.active, #fadeIn-text7.active, #fadeIn-text8.active, #fadeIn-text9.active, #fadeIn-text10.active, #fadeIn-text11.active, #fadeIn-text12.active, #fadeIn-text13.active, #fadeIn-text14.active, #fadeIn-text15.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+#fadeIn-img, #fadeIn-img2, #fadeIn-img3, #fadeIn-img4, #fadeIn-img5, #fadeIn-img6, #fadeIn-img7, #fadeIn-img8, #fadeIn-img9, #fadeIn-img10, #fadeIn-img11, #fadeIn-img12, #fadeIn-img13, #fadeIn-img14, #fadeIn-img15, #fadeIn-img16, #fadeIn-img17, #fadeIn-img18, #fadeIn-img18, #fadeIn-img20, #fadeIn-img21, #fadeIn-img22, #fadeIn-img23, #fadeIn-img24, #fadeIn-img25 {
+    transform: scale(0.95);
+    transition: all 1s;
+}
+
+#fadeIn-img.active, #fadeIn-img2.active, #fadeIn-img3.active, #fadeIn-img4.active, #fadeIn-img5.active, #fadeIn-img6.active, #fadeIn-img7.active, #fadeIn-img8.active, #fadeIn-img9.active,#fadeIn-img10.active, #fadeIn-img11.active, #fadeIn-img12.active, #fadeIn-img13.active, #fadeIn-img14.active, #fadeIn-img15.active, #fadeIn-img16.active, #fadeIn-img17.active, #fadeIn-img18.active,#fadeIn-img19.active, #fadeIn-img20.active, #fadeIn-img21.active, #fadeIn-img22.active, #fadeIn-img23.active, #fadeIn-img24.active, #fadeIn-img25.active {
+    transform: scale(1);
 }
 
 
@@ -1022,7 +1086,7 @@ ul li.message__list--item a div.person-info__card, ul li.message__list--item div
 
 .read-more__btn, .coming-soon__btn {
     position: absolute;
-    z-index: 999;
+    z-index: 990;
     bottom: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1043,6 +1107,16 @@ ul li.message__list--item a div.person-info__card, ul li.message__list--item div
     background-color: #EBEFF3;
     color: #0079C0;
 }
+
+#fadeIn-person-img, #fadeIn-person-img2, #fadeIn-person-img3, #fadeIn-person-img4, #fadeIn-person-img5, #fadeIn-person-img6, #fadeIn-person-img7, #fadeIn-person-img8, #fadeIn-person-img9, #fadeIn-person-img10, #fadeIn-person-img11, #fadeIn-person-img12, #fadeIn-person-img13 {
+    transform: scale(0.96);
+    transition: all 1s;
+}
+
+#fadeIn-person-img.active, #fadeIn-person-img2.active, #fadeIn-person-img3.active, #fadeIn-person-img4.active, #fadeIn-person-img5.active, #fadeIn-person-img6.active, #fadeIn-person-img7.active, #fadeIn-person-img8.active, #fadeIn-person-img9.active, #fadeIn-person-img10.active, #fadeIn-person-img11.active, #fadeIn-person-img12.active, #fadeIn-person-img13.active {
+    transform: scale(1);
+}
+
 
 
 /*===============================
@@ -1081,6 +1155,25 @@ about.html
     font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 25px;
+}
+
+#fadeIn-scale, #fadeIn-scale2 {
+    animation-name: fadeInScaleAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInScaleAnime {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .vision__container--title span, .izm__container--title span {
@@ -1476,6 +1569,7 @@ ul.guidelines__list li div p.guidelines__list--text {
     transform: rotate(-7deg);
     color: #0079C0;
     text-align: right;
+    z-index: 10;
 }
 
 .about-culture__item {
@@ -1568,15 +1662,15 @@ ul.welfare__list--system, ul.welfare__list--events, ul.welfare__list--environmen
     flex-wrap: wrap;
     margin: 3% 13% 1%;
     padding: 1.5% 0;
-    margin-top:-100px;
-    padding-top:100px;
+    margin-top: -100px;
+    padding-top: 100px;
 }
 
 ul.welfare__list--environment {
     margin: 3% 13% 0;
     padding: 1.5% 0 0;
-    margin-top:-100px;
-    padding-top:100px;
+    margin-top: -100px;
+    padding-top: 100px;
 }
 
 ul.welfare__list--system li, ul.welfare__list--events li, ul.welfare__list--environment li {
@@ -1644,4 +1738,224 @@ ul.welfare__list--system li a img, ul.welfare__list--events li a img, ul.welfare
 
 .welfare__list ul li a div.list-environment {
     background-color: #8DD097;
+}
+
+
+/*===============================
+
+message-person.html
+
+================================*/
+
+.message-top__fv {
+    position: relative;
+    width: 100%;
+}
+
+.message-top__fv::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #EBEFF3;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: -1;
+}
+
+.message-top__fv img {
+    width: 100%;
+    margin: 0;
+}
+
+.message-top__fv h2 {
+    position: absolute;
+    top: 39%;
+    left: 13%;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+}
+
+.message-top__fv span {
+    position: absolute;
+    top: 52%;
+    left: 13%;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+}
+
+.message-top__fv--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 190px;
+}
+
+.message-top__fv--info div {
+    padding: 110px 50px;
+}
+
+.message-top__fv--info div.message-top__fv--text {
+    width: 45%;
+}
+
+.message-top__fv--info div.message-top__fv--text p {
+    line-height: 1.7;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+.message-top__fv--name p.post {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    font-weight: 300;
+    font-size: 0.96rem;
+    letter-spacing: 0.06em;
+}
+
+.message-top__fv--name p.post::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    display: inline-block;
+    background-color: #337ab7;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.message-top__fv--name p.big-name {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.message-top__fv--name span {
+    position: inherit;
+    color: #0079C0;
+    font-size: 0.8rem;
+}
+
+.message-person__inner {
+    margin: 10% 18% 17%;
+}
+
+.message-person__inner h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #0079c0;
+    line-height: 1.6;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 5.5rem 0;
+}
+
+.message-person__inner img {
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.message-person__box p.message-person__q {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    color: #323232;
+}
+
+.message-person__box p.message-person__q::before {
+    border-top: 1px solid #0079c0;
+    content: "";
+    width: 50px;
+    margin-right: 16px;
+}
+
+.message-person__box p.message-person__a {
+    font-size: 0.95rem;
+    color: #323232;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.message-person__box p.message-person__a:last-child {
+    margin-bottom: 6rem;
+}
+
+.other-message__container h2 {
+    font-family: "titlefont", sans-serif;
+    font-size: 3.5rem;
+    color: #0079c0;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+
+.other-message__container ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5rem;
+}
+
+.other-message__container ul li {
+    width: calc(100%/3);
+    margin: 0;
+}
+
+.other-message__container ul li a img {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+}
+
+.other-message__container ul li a div.person-info {
+    width: 19rem;
+    height: 9.5rem;
+}
+
+.other-message__container ul li a div.person-info p, .other-message__container ul li a div.person-info span {
+    padding: 0 30px;
+}
+
+.other-message__container ul li a div.read-more__btn {
+    position: absolute;
+    bottom: -43%;
+}
+
+.person-list__link {
+    margin: 20rem 13% 4rem;
+    text-align: center;
+    border-top: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+.person-list__link a {
+    text-decoration: none;
+    display: block;
+    padding: 30px 0;
+    color: #323232;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1em;
+    transition: .3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.person-list__link a:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
