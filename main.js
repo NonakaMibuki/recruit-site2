@@ -1,3 +1,6 @@
+//空の ontouchstart 属性を body 要素に設定
+document.getElementsByTagName('body')[0].setAttribute('ontouchstart', '');
+
 $(function () {
   //ハンバーガーメニュー
   $("#drawer_toggle").click(function () {
@@ -63,11 +66,12 @@ $(function () {
     if ($(window).width() <= 768) {
       $(".news__box li a.hide-text").hide();
     }
+    
     $(".information-more").on("click", function () {
       $(this).toggleClass("on-click");
       $(".news__box li a.hide-text").toggle();
     });
-  });
+  })
     $(window).scroll(function () {
       $("#fadeIn2, #fadeIn-text4, #fadeIn-text7").each(function () {
         var position = $(this).offset().top;
