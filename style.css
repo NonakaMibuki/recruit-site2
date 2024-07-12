@@ -3479,6 +3479,7 @@ ul.recruitment__info li p.recruitment__info--text {
     ul.recruitment__info li p.recruitment__info--title {
         font-size: 0.85rem;
         margin-bottom: 8px;
+        width: 100%;
     }
 
     ul.recruitment__info li p.recruitment__info--text {
