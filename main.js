@@ -59,6 +59,13 @@ $(window).scroll(function () {
   });
 });
 
+//インフォメーションreadmore
+$('.news__box li a.hide-text').hide();
+$(".information-more").on("click", function() {
+  $(this).toggleClass("on-click");
+  $('.news__box li a.hide-text').toggle();
+});
+
 $(window).scroll(function () {
   $("#fadeIn2, #fadeIn-text4, #fadeIn-text7").each(function () {
     var position = $(this).offset().top;
