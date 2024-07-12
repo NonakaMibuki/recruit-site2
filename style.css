@@ -365,11 +365,11 @@ h1 a span {
         border-radius: 20px;
         font-weight: 200;
     }
-    
+
     .btn__new {
         padding-right: 10px;
     }
-    
+
     .btn__new a {
         background-color: #F0F0F0;
         color: #007AC5;
@@ -421,12 +421,12 @@ h1 a span {
         border-left: none;
         padding-left: 0;
     }
-    
+
     .btn__middle a {
         background-color: #007AC5;
         color: #fff;
     }
-    
+
     .btn__engineer a {
         background-color: #32B9FF;
         color: #fff;
@@ -713,6 +713,10 @@ ul.news__box li a p {
     transform: translate(0, 0);
 }
 
+.hide-text {
+    display: none;
+}
+
 .information__inner div.information-more {
     display: none;
 }
@@ -761,12 +765,18 @@ ul.news__box li a p {
         margin: 30px auto 0;
         font-size: 1rem;
     }
+
+    .hide-text {
+        display: block;
+    }
+
     .information-more {
         display: block;
-      }
-      .information-more.on-click  {
+    }
+
+    .information-more.on-click {
         display: none;
-      }
+    }
 }
 
 /*===============================
